@@ -17,5 +17,15 @@ public class ListaAktoreak {
 		
 		return this.zerrenda.iterator();
 	}
+	
+	public void gehituAktorea(Aktorea pAktore){
+		
+		this.zerrenda.add(pAktore);
+	}
+	
+	public void ezabatuAktorea(Aktorea pAktore){
+		
+		this.zerrenda.remove(pAktore);
+	}
 
 }

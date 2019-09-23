@@ -25,19 +25,22 @@ public class IrakurketaKlaseaProba {
 	
 	public void fitxategiaIrakurri(){
 		
-		while(x.hasNextLine()){
+		//while(x.hasNextLine()){
 			
-			String lerroa = this.x.nextLine();
-			String[] peliAktBanatuak = lerroa.split("\\s+--->\\s+");
-			String pelikula = peliAktBanatuak[0];
-			String[] aktoreak =  peliAktBanatuak[1].split("\\s+&&&\\s+");
+			String		lerroa			= this.x.nextLine();
+			String[]	peliAktBanatuak = lerroa.split("\\s+--->\\s+");
+			String		pelikulaIzena	= peliAktBanatuak[0];
+			String[]	aktoreak		= peliAktBanatuak[1].split("\\s+&&&\\s+");
+			
+			
+			Pelikula pelikulaHau = new Pelikula(pelikulaIzena);
 			
 			
 			
 			System.out.println(peliAktBanatuak[0]);
 			System.out.println(peliAktBanatuak[1]);
 			
-		}
+		//}
 	}
 	
 	public void fitxategiaItxi(){

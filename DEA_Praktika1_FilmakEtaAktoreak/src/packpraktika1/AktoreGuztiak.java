@@ -16,8 +16,7 @@ public class AktoreGuztiak {
 		
 		if( nireAktoreak == null){
 			
-			nireAktoreak = new AktoreGuztiak();
-			
+			nireAktoreak = new AktoreGuztiak();	
 		}
 		
 		return nireAktoreak;

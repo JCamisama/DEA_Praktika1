@@ -19,5 +19,14 @@ public class ListaPelikulak {
 		return this.zerrenda.iterator();
 	}
 	
+	public void gehituAktorea(Pelikula pFilma){
+		
+		this.zerrenda.add(pFilma);
+	}
+	
+	public void ezabatuFilma(Pelikula pFilma){
+		
+		this.zerrenda.remove(pFilma);
+	}
 	
 }
