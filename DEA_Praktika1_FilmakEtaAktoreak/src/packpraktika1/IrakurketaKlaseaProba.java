@@ -32,8 +32,23 @@ public class IrakurketaKlaseaProba {
 			String		pelikulaIzena	= peliAktBanatuak[0];
 			String[]	aktoreak		= peliAktBanatuak[1].split("\\s+&&&\\s+");
 			
+		//HAU AZPIPROGRAMA BAT IZANGO DA	
+			//Aktore eta pelikula guztien zerrendei deia
+			PelikulaGuztiak	peliMaster	= PelikulaGuztiak.getNirePelikulak();
+			AktoreGuztiak	aktorMaster	= AktoreGuztiak.getNireAktoreak();
 			
-			Pelikula pelikulaHau = new Pelikula(pelikulaIzena);
+			
+			Pelikula	pelikulaHau		= new Pelikula(pelikulaIzena);
+			int			AktorPosizio	= 0;
+			
+			while( AktorPosizio < aktoreak.length ){
+				
+				Aktorea	aktoreHau	= new Aktorea(aktoreak[AktorPosizio]);
+				aktoreHau.gehituPelikula(pelikulaHau);
+				pelikulaHau.aktoreBerriaSartu(aktoreHau);
+					
+				
+			}
 			
 			
 			

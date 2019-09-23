@@ -10,5 +10,10 @@ public class Aktorea {
 		
 		this.izena = pIzena;
 	}
+	
+	public void gehituPelikula(Pelikula pFilma){
+		
+		this.starringPelikula.gehituAktorea(pFilma);
+	}
 
 }

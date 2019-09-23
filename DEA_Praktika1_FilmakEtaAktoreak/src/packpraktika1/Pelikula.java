@@ -14,6 +14,7 @@ public class Pelikula{
 	
 	public void aktoreBerriaSartu(Aktorea pAktore){
 		
+		this.jardunDutenak.gehituAktorea(pAktore);
 		
 	}
 	
