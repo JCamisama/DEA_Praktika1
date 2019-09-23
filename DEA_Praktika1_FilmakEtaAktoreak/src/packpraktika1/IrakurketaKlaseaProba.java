@@ -41,7 +41,7 @@ public class IrakurketaKlaseaProba {
 			Pelikula	pelikulaHau		= new Pelikula(pelikulaIzena);
 			int			AktorPosizio	= 0;
 			
-			/*while( AktorPosizio < aktoreak.length ){
+			while( AktorPosizio < aktoreak.length ){
 				
 				Aktorea	aktoreHau	= new Aktorea(aktoreak[AktorPosizio]);
 				
@@ -50,15 +50,15 @@ public class IrakurketaKlaseaProba {
 				peliMaster.gehituPelikula(pelikulaHau);//ez errepikatzearena EZ DAGO INPLEMENTATUTA ORAINDIK
 				pelikulaHau.aktoreBerriaSartu(aktoreHau);
 					
-				
-			}*/
+				AktorPosizio++;
+			}
 			
 			
 			
-			System.out.println(pelikulaIzena);
+			//System.out.println(pelikulaIzena);
 			//System.out.println(peliAktBanatuak[1]);
 			
-			//aktorMaster.inprimatuAktoreak();
+			aktorMaster.inprimatuAktoreak();
 			
 		//}
 	}
