@@ -9,7 +9,8 @@ public class Pelikula{
 	
 	public Pelikula(String pIzena){
 		
-		this.izena = pIzena;
+		this.izena			= pIzena;
+		this.jardunDutenak	= new ListaAktoreak();
 	}
 	
 	public void aktoreBerriaSartu(Aktorea pAktore){

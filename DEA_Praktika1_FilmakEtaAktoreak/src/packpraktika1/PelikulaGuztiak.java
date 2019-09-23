@@ -20,5 +20,15 @@ public class PelikulaGuztiak {
 		
 		return PelikulaGuztiak.nirePelikulak;
 	}
+	
+	public void gehituPelikula(Pelikula pFilma){
+		
+		this.zerrenda.gehituPelikula(pFilma);
+	}
+	
+	public void ezabatuFilma(Pelikula pFilma){
+		
+		this.zerrenda.ezabatuFilma(pFilma);
+	}
 
 }

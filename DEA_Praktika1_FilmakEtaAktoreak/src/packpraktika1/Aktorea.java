@@ -9,11 +9,18 @@ public class Aktorea {
 	public Aktorea(String pIzena){
 		
 		this.izena = pIzena;
+		starringPelikula = new ListaPelikulak();
 	}
 	
 	public void gehituPelikula(Pelikula pFilma){
 		
-		this.starringPelikula.gehituAktorea(pFilma);
+		this.starringPelikula.gehituPelikula(pFilma);
 	}
 
+	
+	public void inprimatuAktorea(){
+		
+		System.out.println("\nIzen Osoa: " + this.izena + "\n\n");
+		
+	}
 }

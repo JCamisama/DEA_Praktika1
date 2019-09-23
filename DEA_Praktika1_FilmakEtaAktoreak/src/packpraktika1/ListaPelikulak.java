@@ -19,7 +19,7 @@ public class ListaPelikulak {
 		return this.zerrenda.iterator();
 	}
 	
-	public void gehituAktorea(Pelikula pFilma){
+	public void gehituPelikula(Pelikula pFilma){
 		
 		this.zerrenda.add(pFilma);
 	}

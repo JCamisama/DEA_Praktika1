@@ -27,5 +27,17 @@ public class ListaAktoreak {
 		
 		this.zerrenda.remove(pAktore);
 	}
+	
+	public void inprimatuAktoreak(){
+		
+		Iterator<Aktorea>	itr			= this.getIteradorea();
+		Aktorea				aktoreHau	= null;
+		
+		while( itr.hasNext() ){
+			
+			aktoreHau = itr.next();
+			aktoreHau.inprimatuAktorea();
+		}
+	}
 
 }

@@ -22,4 +22,19 @@ public class AktoreGuztiak {
 		return nireAktoreak;
 	}
 
+	public void gehituAktorea(Aktorea pAktore){
+		
+		this.zerrenda.gehituAktorea(pAktore);
+	}
+	
+	public void ezabatuAktorea(Aktorea pAktore){
+		
+		this.zerrenda.ezabatuAktorea(pAktore);
+	}
+	
+	
+	public void inprimatuAktoreak(){
+		
+		this.zerrenda.inprimatuAktoreak();
+	}
 }
