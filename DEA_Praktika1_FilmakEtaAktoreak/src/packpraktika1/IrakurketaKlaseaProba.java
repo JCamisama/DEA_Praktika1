@@ -71,9 +71,11 @@ public class IrakurketaKlaseaProba {
 	public static void main(String[] args){
 		
 		IrakurketaKlaseaProba cHau = new IrakurketaKlaseaProba();
+		ReadWriteProbaKlasea  bHau = new ReadWriteProbaKlasea();
 		
 		cHau.fitxategiaIreki();
 		cHau.fitxategiaIrakurri();
 		cHau.fitxategiaItxi();
+		bHau.AktoreenZerrendaIdatzi();
 	}
 }

@@ -30,5 +30,11 @@ public class PelikulaGuztiak {
 		
 		this.zerrenda.ezabatuFilma(pFilma);
 	}
-
+	
+	public Pelikula pelikulaBilatu(Pelikula pFilma) {
+		
+		return this.zerrenda.pelikulaBilatu(pFilma);
+	}
+	
+	
 }

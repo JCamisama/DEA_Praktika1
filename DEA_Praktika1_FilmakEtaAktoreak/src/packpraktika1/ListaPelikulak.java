@@ -29,4 +29,34 @@ public class ListaPelikulak {
 		this.zerrenda.remove(pFilma);
 	}
 	
+	public Pelikula pelikulaBilatu(Pelikula pFilma) {
+		
+		Iterator<Pelikula>	itr			= this.getIteradorea();
+		Pelikula				egungoPelikula	= null;
+		boolean				topatua		= false;
+		
+		while( itr.hasNext() || topatua==true ){
+			
+			egungoPelikula = itr.next();
+			
+			if (egungoPelikula.equals(pFilma)) {
+				
+				topatua = true;	
+				System.out.println("Zure pelikula listan dago");								
+			}			
+		}
+		
+		if (topatua == false) {
+			
+			System.out.println("Zure pelikula ez dago listan, baina orain sartuko dugu");
+			this.gehituPelikula(pFilma);
+			egungoPelikula = itr.next();
+		}
+		
+	return egungoPelikula;
+		
+		
+	}
+	
+		
 }

@@ -10,15 +10,16 @@ import java.io.BufferedWriter;
 
 public class ReadWriteProbaKlasea {
 
-	/*
-	public static void main(String[] args){
+	
+	public void AktoreenZerrendaIdatzi(){
 		
 		String filename = "proba.txt";
 		
 		try{
 			
 			PrintWriter outputStream = new PrintWriter(filename);
-			outputStream.println(" Hello there, this is just an innocent comment!");
+			AktoreGuztiak.idatziAktoreGuztiak(outputStream);
+			//outputStream.println(" Hello there, this is just an innocent comment!");
 			outputStream.flush();
 			outputStream.close();
 			
@@ -32,7 +33,7 @@ public class ReadWriteProbaKlasea {
 		
 	}
 	
-*/
+
 /*
 	public static void main(String[] args) throws IOException {
 		

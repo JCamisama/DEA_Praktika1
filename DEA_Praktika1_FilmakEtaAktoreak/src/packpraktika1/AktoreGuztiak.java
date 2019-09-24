@@ -1,5 +1,6 @@
 package packpraktika1;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class AktoreGuztiak {
@@ -32,9 +33,21 @@ public class AktoreGuztiak {
 		this.zerrenda.ezabatuAktorea(pAktore);
 	}
 	
+	public Aktorea aktoreaBilatu(Aktorea pAktore) {
+		
+		return this.zerrenda.aktoreaBilatu(pAktore);
+	}
 	
+		
 	public void inprimatuAktoreak(){
 		
 		this.zerrenda.inprimatuAktoreak();
+	}	
+	
+	public static void idatziAktoreGuztiak(PrintWriter pOutputStream){
+		
+		pOutputStream.println("\t\t***AKTOREEN ZERRENDA***\n\n");
+		AktoreGuztiak.getNireAktoreak().zerrenda.idatziAktoreGuztiak(pOutputStream);
+		
 	}
 }
