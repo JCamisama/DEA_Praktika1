@@ -25,42 +25,42 @@ public class IrakurketaKlaseaProba {
 	
 	public void fitxategiaIrakurri(){
 		
-		//while(x.hasNextLine()){
+		while(x.hasNextLine()){
 			
 			String		lerroa			= this.x.nextLine();
 			String[]	peliAktBanatuak = lerroa.split("\\s+--->\\s+");
 			String		pelikulaIzena	= peliAktBanatuak[0];
 			String[]	aktoreak		= peliAktBanatuak[1].split("\\s+&&&\\s+");
 			
-		//HAU AZPIPROGRAMA BAT IZANGO DA	
-			//Aktore eta pelikula guztien zerrendei deia
-			PelikulaGuztiak	peliMaster	= PelikulaGuztiak.getNirePelikulak();
-			AktoreGuztiak	aktorMaster	= AktoreGuztiak.getNireAktoreak();
+			this.pelikulaAktoreakHasieratu(pelikulaIzena, aktoreak);
+		
 			
+			//AktoreGuztiak.getNireAktoreak().inprimatuAktoreak();
 			
-			Pelikula	pelikulaHau		= new Pelikula(pelikulaIzena);
-			int			AktorPosizio	= 0;
+		}
+	}
+	
+	public void pelikulaAktoreakHasieratu(String pFilmaIzena, String[] pAktoreakIzenak){
+		
+		PelikulaGuztiak	peliMaster	= PelikulaGuztiak.getNirePelikulak();
+		AktoreGuztiak	aktorMaster	= AktoreGuztiak.getNireAktoreak();
+		
+		
+		Pelikula	pelikulaHau		= new Pelikula(pFilmaIzena);
+		int			AktorPosizio	= 0;
+		
+		while( AktorPosizio < pAktoreakIzenak.length ){
 			
-			while( AktorPosizio < aktoreak.length ){
+			Aktorea	aktoreHau	= new Aktorea(pAktoreakIzenak[AktorPosizio]);
+			
+			aktoreHau.gehituPelikula(pelikulaHau);
+			aktorMaster.gehituAktorea(aktoreHau);  //ez errepikatzearena EZ DAGO INPLEMENTATUTA ORAINDIK
+			peliMaster.gehituPelikula(pelikulaHau);//ez errepikatzearena EZ DAGO INPLEMENTATUTA ORAINDIK
+			pelikulaHau.aktoreBerriaSartu(aktoreHau);
 				
-				Aktorea	aktoreHau	= new Aktorea(aktoreak[AktorPosizio]);
-				
-				aktoreHau.gehituPelikula(pelikulaHau);
-				aktorMaster.gehituAktorea(aktoreHau);  //ez errepikatzearena EZ DAGO INPLEMENTATUTA ORAINDIK
-				peliMaster.gehituPelikula(pelikulaHau);//ez errepikatzearena EZ DAGO INPLEMENTATUTA ORAINDIK
-				pelikulaHau.aktoreBerriaSartu(aktoreHau);
-					
-				AktorPosizio++;
-			}
-			
-			
-			
-			//System.out.println(pelikulaIzena);
-			//System.out.println(peliAktBanatuak[1]);
-			
-			aktorMaster.inprimatuAktoreak();
-			
-		//}
+			AktorPosizio++;
+		}
+		
 	}
 	
 	public void fitxategiaItxi(){
