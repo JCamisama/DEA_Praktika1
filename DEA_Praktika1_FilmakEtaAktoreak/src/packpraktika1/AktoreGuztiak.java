@@ -1,5 +1,6 @@
 package packpraktika1;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class AktoreGuztiak {
@@ -36,5 +37,12 @@ public class AktoreGuztiak {
 	public void inprimatuAktoreak(){
 		
 		this.zerrenda.inprimatuAktoreak();
+	}
+	
+	public static void idatziAktoreGuztiak(PrintWriter pOutputStream){
+		
+		pOutputStream.println("\t\t***AKTOREEN ZERRENDA***\n\n");
+		AktoreGuztiak.getNireAktoreak().zerrenda.idatziAktoreGuztiak(pOutputStream);
+		
 	}
 }

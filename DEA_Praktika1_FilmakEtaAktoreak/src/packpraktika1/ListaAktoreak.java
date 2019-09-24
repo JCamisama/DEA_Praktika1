@@ -1,5 +1,6 @@
 package packpraktika1;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -40,4 +41,16 @@ public class ListaAktoreak {
 		}
 	}
 
+	public void idatziAktoreGuztiak(PrintWriter pOutputStream){
+		
+		Iterator<Aktorea> itr		= this.getIteradorea();
+		Aktorea			  aktoreHau = null;
+		
+		while(itr.hasNext() ){
+			
+			aktoreHau = itr.next();
+			aktoreHau.idatziAktorearenIzena(pOutputStream);
+		}
+		
+	}
 }

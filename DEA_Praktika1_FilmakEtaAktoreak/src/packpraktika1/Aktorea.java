@@ -1,4 +1,5 @@
 package packpraktika1;
+import java.io.PrintWriter;
 import java.util.*;
 
 public class Aktorea {
@@ -23,4 +24,11 @@ public class Aktorea {
 		System.out.println("\nIzen Osoa: " + this.izena + "\n\n");
 		
 	}
+	
+	public void idatziAktorearenIzena(PrintWriter pOutputStream){
+		
+		pOutputStream.println(this.izena);
+	}
+		
+		
 }
